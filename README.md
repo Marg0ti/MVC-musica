@@ -18,7 +18,8 @@
 This is a project in which you can perform various CRUD operations on artists and their albums.
 
 
-![image](https://github.com/user-attachments/assets/f1ba36ad-5762-45f6-bc4d-3fa99ab938bd)
+![image](https://github.com/user-attachments/assets/c73d44a4-8ce2-449e-9613-eb53684c8260)
+
 
 I will leave the database (dataBase.sql) in case you want to test the application.
 
