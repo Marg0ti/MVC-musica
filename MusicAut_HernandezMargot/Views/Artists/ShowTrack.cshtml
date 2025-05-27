@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div>
+    <h4>Canciones</h4>
+    <hr />
+    @if (Model?.Tracks != null )
+    {
+        <ul>
+            @foreach (var track in Model.Tracks)
+            {
+                <li>@track.Name</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No hay canciones disponibles para este álbum.</p>
+    }
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>

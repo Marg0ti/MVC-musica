@@ -1,0 +1,31 @@
+﻿
+@{
+}
+
+@model List<MusicAut_HernandezMargot.Models.Customer>
+<h2>Lista de invitados</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre:</th>
+            <th>Correo electrónico</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.FirstName @customer.LastName</td>
+                <td>@customer.Email</td>
+            
+            @if (User.IsInRole("Administrator"))
+            {
+            <td>
+                <a asp-action="EditCustomer" asp-route-id="@customer.CustomerId">Editar</a> |
+                <a asp-action="DeleteCustomer" asp-route-id="@customer.CustomerId">Borrar</a>
+            </td>
+            }
+            </tr>
+        }
+    </tbody>
+</table>

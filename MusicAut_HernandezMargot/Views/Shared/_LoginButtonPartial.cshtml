@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (!SignInManager.IsSignedIn(User))
+{
+    <h2>Login</h2>
+    <p>
+        <a class="btn btn-default" asp-area="Identity" asp-page="/Account/Login">
+            <img src="~/NewFolder/login.jpg" height="200px" width="200px" />
+            Login&raquo;
+
+
+        </a>
+    </p>
+}

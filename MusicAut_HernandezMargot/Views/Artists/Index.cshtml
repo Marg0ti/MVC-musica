@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MusicAut_HernandezMargot.Models.Artist>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listado de artistas</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo artista</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ArtistId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.ArtistId">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.ArtistId">Borrar</a> |
+                @* <a asp-action="ShowTrack" asp-route-id="@item.ArtistId">Ver canciones</a>  *@
+                    <a asp-action="CreateAlbum" asp-route-id="@item.ArtistId">Crear álbum</a> |
+                <a asp-action="ShowAlbum" asp-route-id="@item.ArtistId">Ver álbumes</a>
+
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

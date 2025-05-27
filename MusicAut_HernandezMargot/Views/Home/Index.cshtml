@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Discos/Álbum</h2>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Index", "Albums")">
+                <img src="~/NewFolder/album.jpg" height="200px" width="200px" />
+                Ir a álbum&raquo;
+             </a>
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Artistas</h2>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Index", "Artists")">
+                <img src="~/NewFolder/artista.jpg" height="200px" width="200px" />
+                Ir a artistas&raquo;
+            </a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        @Html.Partial("_LoginButtonPartial")
+    </div>
+</div>
+

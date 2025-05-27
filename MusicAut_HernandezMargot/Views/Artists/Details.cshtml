@@ -1,0 +1,59 @@
+﻿@model MusicAut_HernandezMargot.Models.Artist
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles del artista</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+
+	<a asp-action="Edit" asp-route-id="@Model?.ArtistId">Editar</a> |
+	<a asp-action="Index">Volver al listado</a>
+
+    <h1>Comentarios</h1>
+	<a type="button" asp-action="Create" asp-controller="Reviews" asp-route-id="@Model?.ArtistId">Añadir comentario</a>
+
+    <table class="table">
+		<thead>
+			<tr>
+				<th>Título</th>
+				<th>Contenido</th>
+				<th>Calificación</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			@foreach (var item in Model.Reviews) {
+			<tr>
+				
+				<td>
+					@Html.DisplayFor(modelItem => item.Title)
+				</td>
+	
+				<td>
+					@Html.DisplayFor(modelItem => item.ReviewContent)
+				</td>
+	
+				<td>
+					@Html.DisplayFor(modelItem => item.Rating)
+				</td>
+			</tr>
+			}
+		</tbody>
+	</table>
+	<hr />
+</div>
+<div>
+
+</div>
+
