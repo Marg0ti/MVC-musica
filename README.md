@@ -4,15 +4,12 @@
 <table>
 <tr>
 <td>
-  Music MVC in which you can perform CRUD actions on artists and their albums.
+  Music MVC in which you can perform CRUD actions on artists and their albums. It also has a user registration system.
 </td>
 </tr>
 </table>
 
 
-
-
-## Site
 
 ### Landing Page
 This is a project in which you can perform various CRUD operations on artists and their albums.
@@ -39,6 +36,7 @@ I will leave the database (dataBase.sql) in case you want to test the applicatio
   - Views
   - Database context
   - Migrations
+    
   ![image](https://github.com/user-attachments/assets/b9bfa492-bcc7-4827-9759-22d5eba02d61)
 
 
